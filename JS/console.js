@@ -25,4 +25,14 @@ document.querySelectorAll(".reviewPic").forEach(img => {
     img.addEventListener("mouseout", function() {
         undo();
     });
-});
+
+    img.addEventListener("focus", function() {
+        console.log("Image focus");
+        upDate(this);
+    });
+
+    img.addEventListener("blur", function() {
+        console.log("Image blur");
+        undo();
+    });
+})
